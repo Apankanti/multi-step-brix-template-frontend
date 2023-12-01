@@ -1,0 +1,20 @@
+.header {
+    padding: 50px;
+    display: flex;
+    width: 85%;
+    flex-direction: row !important;
+    justify-content: space-between;
+}
+
+.logo {
+    /* Set initial height */
+    height: 25px;
+    /* Add transition for a smooth effect */
+    transition: height 0.3s ease;
+    /* Adjust the duration and timing function as needed */
+}
+
+.logo:hover {
+    height: 23px;
+    /* Adjust the height you want on hover */
+}

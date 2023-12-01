@@ -1,0 +1,20 @@
+.common-button {
+    background-color: #007bff;
+    /* Blue color */
+    color: #fff;
+    /* White text color */
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius:20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 120px;
+    height: 50px;
+    /* Smooth transition for background color */
+}
+
+.common-button:hover {
+    background-color: #0056b3;
+    /* Darker blue on hover */
+}
