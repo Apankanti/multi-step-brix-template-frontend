@@ -45,7 +45,7 @@ p {
 .form-container {
     box-sizing: border-box;
     width: 70%;
-    height: 60vh;
+    height: 420px;
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     margin-right: auto;

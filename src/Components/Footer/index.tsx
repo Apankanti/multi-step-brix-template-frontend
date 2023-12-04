@@ -19,7 +19,7 @@ function Footer() {
   }
   return (
     <div className="footer">
-      <div className="logo">
+      <div className="footer-logo">
         <img src={logoImage} alt="logo-image" height={25} />
         <p>Copyright © 2021 BRIX Templates | All Rights Reserved</p>
       </div>

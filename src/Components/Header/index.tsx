@@ -11,7 +11,7 @@ const Header: React.FC<HeaderProps> = () => {
   return (
     <div className="header">
       <div className="logo">
-        <img className="logo" src={logo} alt="logo-image" height={30} />
+        <img className="logo" src={logo} alt="logo-image"/>
       </div>
       <div><Button text="Clone now" /></div>
     </div>

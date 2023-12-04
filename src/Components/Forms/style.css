@@ -64,18 +64,6 @@ input {
     flex-wrap: wrap;
 }
 
-
-/* .submitDetails {
-    margin-right: auto;
-    margin-left: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    margin-bottom: 10px;
-} */
-
 .textclass {
     display: flex;
     flex-direction: column;
