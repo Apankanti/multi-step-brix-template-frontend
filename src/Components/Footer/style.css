@@ -1,0 +1,25 @@
+.footer {
+    display: flex;
+    flex-direction: row;
+    width: 98%;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+    border-top: 1px solid lightgray;
+    margin-top: 20px;
+}
+
+.logo {
+    height: fit-content;
+    justify-content: center;
+    align-items: start;
+    display: flex;
+    width: fit-content;
+    flex-direction: column;
+    text-align: left;
+}
+
+.logo p {
+    font-size: x-small;
+    color: gray;
+}

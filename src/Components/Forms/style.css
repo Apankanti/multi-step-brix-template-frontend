@@ -1,9 +1,14 @@
 .contact-contailer {
     padding: 20px;
+
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     gap: 20px;
 
+}
+
+.contact-contailer h2 {
+    font-size: 24px;
 }
 
 .input-grid {
@@ -31,4 +36,63 @@ input {
     margin-top: 20px;
     display: flex;
     justify-content: flex-end;
+}
+
+
+input {
+
+    padding: 20px;
+    border-radius: 25px;
+    border: 1px solid lightgray;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-head-text {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+
+}
+
+.submitDetails {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 10px;
+}
+
+.textclass {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+
+.priceDetails {
+    padding: 19px;
+    width: 400px;
+}
+
+.priceDetails {
+    padding: 19px;
+    width: 400px;
+}
+
+.error-message {
+    color: red;
 }

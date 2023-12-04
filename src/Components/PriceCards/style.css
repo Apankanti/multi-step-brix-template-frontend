@@ -1,0 +1,17 @@
+.card {
+    display: flex;
+    padding: 15px;
+    border: 1px solid lightgray;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: inset 0 0 2px lightgray;
+}
+
+.card>img {
+    width: 30px;
+    padding: 8px;
+    background-color: rgb(228, 225, 255);
+    border-radius: 50%;
+}

@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 1200px;
+    width: 98%;
     margin-left: auto;
     margin-right: auto;
     justify-content: center;
@@ -41,8 +41,8 @@ p {
 }
 
 .form-container {
-    width: 65%;
-
+    width: 70%;
+    height: 60vh;
     margin-right: auto;
     margin-left: auto;
 
