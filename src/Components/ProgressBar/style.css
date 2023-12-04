@@ -1,4 +1,5 @@
 .progress-bar {
+    box-sizing: border-box;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -7,9 +8,9 @@
     margin-bottom: 40px;
 }
 
-/* .step-container {
+.step-container {
     position: relative;
-} */
+}
 
 .step {
     width: 60px;
@@ -18,12 +19,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #EFF0F6;
-    transition: width 0.3s ease;
+    background-color: #dcdce6;
+    /* Lighter background color */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Add a subtle shadow */
+    transition: background-color 0.3s ease, width 0.3s ease;
 }
 
 .step.active {
-    background-color: #4A3AFF;
+    background: linear-gradient(to right, #667EEA, #764BA2);
+    /* Gradient background */
     color: #fff;
     width: 100px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Enhance shadow for active step */
 }

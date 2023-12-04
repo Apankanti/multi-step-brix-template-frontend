@@ -6,7 +6,7 @@ import OurServices from "./Components/Forms/OurServices";
 import ProgressBar from "./Components/ProgressBar";
 import Button from "./Components/Button";
 import PriceDetails from "./Components/Forms/PriceDetails";
-import SubmitDetails from "./Components/Forms/SubmitDetails";
+import SubmitDetails from "./Components/SubmitDetails/SubmitDetails";
 import { useSelector } from "react-redux";
 import { RootState } from "./store/types";
 import Footer from "./Components/Footer";
@@ -61,24 +61,26 @@ function App() {
           )}
           {step == 4 && <SubmitDetails />}
         </div>
-        <div style={{ display: "flex", justifyContent: "space-between" }}>
-          {step !== 1 && (
-            <button
-              className="common-button"
-              onClick={() => {
-                setStep((prev) => prev - 1);
-              }}
-            >
-              Previous Step
-            </button>
-          )}
-          {step !== 4 && (
-            <Button
-              style={{ justifyContent: "flex-end" }}
-              text="Next Step"
-              onClick={nextStepHandler}
-            />
-          )}
+        <div className="buttons">
+          <div className="navigate-buttons">
+            {step !== 1 && (
+              <button
+                className="prev-button"
+                onClick={() => {
+                  setStep((prev) => prev - 1);
+                }}
+              >
+                Previous Step
+              </button>
+            )}
+            {step !== 4 && (
+              <Button
+                style={{ justifyContent: "flex-start" }}
+                text="Next Step"
+                onClick={nextStepHandler}
+              />
+            )}
+          </div>
         </div>
       </div>
       <Footer />

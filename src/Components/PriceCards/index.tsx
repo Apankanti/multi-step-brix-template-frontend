@@ -15,8 +15,8 @@ const PriceCard: React.FC<CheckboxProps> = ({
   value,
 }) => {
   return (
-    <div className="chekboxcard">
-      <label className="checkboxlabel">
+    <div className="priceCard">
+      <label className="priceLabel">
         <input
           id={label}
           type="radio"
@@ -24,7 +24,7 @@ const PriceCard: React.FC<CheckboxProps> = ({
           onChange={(e) => {
             onChange(e.target.checked);
           }}
-          className="checkboxinput"
+          className="priceInput"
           name="budget"
           value={value}
         />

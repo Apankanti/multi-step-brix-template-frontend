@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import logoImage from "../images/logo-brix-templates.svg";
 import "./style.css";
 import CommonInput from "../CommonInput/CommonInput";
+import FooterInput from "./FooterInput";
 
 function Footer() {
   const [fEmail, setFEmail] = useState<string>("");
@@ -23,7 +24,7 @@ function Footer() {
         <p>Copyright © 2021 BRIX Templates | All Rights Reserved</p>
       </div>
       <div style={{ width: "300px" }}>
-        <CommonInput
+        <FooterInput
           type="email"
           placeholder="Enter Your Email"
           buttonTrue="true"

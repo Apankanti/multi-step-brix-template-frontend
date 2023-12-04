@@ -8,7 +8,7 @@ import devService from "../../Components/images/development.svg";
 import webDesign from "../../Components/images/web-design.svg";
 import marketing from "../../Components/images/marketing.svg";
 import other from "../../Components/images/other.svg";
-
+import "./style.css";
 interface ServicesProps {
   setFormValid: React.Dispatch<React.SetStateAction<boolean>>;
   isNext: boolean;
@@ -68,8 +68,8 @@ const OurServices: React.FC<ServicesProps> = ({
   }
 
   return (
-    <div>
-      <label>Our Services</label>
+    <div className="common">
+      <h2>Our Services</h2>
       <p>Please select which service you are interested in.</p>
       <div className="card-container">
         <ServiceCard
@@ -93,7 +93,7 @@ const OurServices: React.FC<ServicesProps> = ({
           onClick={() => selectionOperationHandler("Other")}
         />
       </div>
-      <div className="error-message" style={{ color: 'red' }}>
+      <div className="error-message" style={{ color: "red" }}>
         {serviceError}
       </div>
     </div>

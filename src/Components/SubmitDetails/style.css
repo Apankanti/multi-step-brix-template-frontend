@@ -1,0 +1,28 @@
+p {
+    word-wrap: break-word;
+}
+
+.submitDetails {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+}
+
+.submitDetails img {
+    margin-top: 10px;
+}
+
+.textclass {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    word-wrap: break-word;
+}

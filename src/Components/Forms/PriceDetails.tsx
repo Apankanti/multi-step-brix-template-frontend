@@ -39,15 +39,15 @@ const Form3: React.FC<Form3Props> = ({
         setIsNext(false);
       }
     }
-  }, [isNext, projectBudget, form, dispatch, setFormValid, setStep, setIsNext]);
+  }, [isNext]);
 
   return (
-    <div className="priceDetails">
+    <div className="common">
       <div className="form-head-text">
         <h2>What’s your project budget?</h2>
         <p>Please select the project budget range you have in mind.</p>
       </div>
-      <div className="form1">
+      <div className="">
         <div className="card-container">
           <PriceCard
             label="$5.000 - $10.000"

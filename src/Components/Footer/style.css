@@ -23,3 +23,55 @@
     font-size: x-small;
     color: gray;
 }
+
+.foooterInput__box {
+    outline: none;
+    height: 70px;
+    width: 100%;
+    border-radius: 50px;
+    padding: 18px 20px;
+    border: none;
+    box-shadow: inset 0 0 2px lightgray;
+}
+
+.FooterInput {
+    position: relative;
+}
+
+.input-container {
+    position: relative;
+}
+
+.foooterInput__box {
+    padding-right: 40px;
+    /* Adjust as needed to accommodate the button */
+}
+
+.footer-btn {
+    position: absolute;
+    top: 50%;
+    right: 25px;
+    /* Adjust the distance from the right */
+    transform: translateY(-50%);
+}
+
+.footer-btn {
+    background-color: #007bff;
+    /* Blue color */
+    color: #fff;
+    /* White text color */
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 110px;
+    height: 50px;
+    /* Smooth transition for background color */
+}
+
+.footer-btn:hover {
+    background-color: #0056b3;
+    /* Darker blue on hover */
+}

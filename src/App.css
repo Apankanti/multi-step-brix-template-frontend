@@ -2,7 +2,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 98%;
+    width: 100%;
+    height: auto;
     margin-left: auto;
     margin-right: auto;
     justify-content: center;
@@ -25,6 +26,7 @@ p {
 }
 
 .main-container {
+    box-sizing: border-box;
     margin-left: auto;
     margin-right: auto;
 }
@@ -41,9 +43,32 @@ p {
 }
 
 .form-container {
+    box-sizing: border-box;
     width: 70%;
     height: 60vh;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     margin-right: auto;
     margin-left: auto;
 
+}
+
+.navigate-buttons {
+    margin-top: 20px;
+    height: auto;
+    display: flex;
+    width: 100%;
+    justify-content: end;
+    margin-right: auto;
+    margin-left: auto;
+    gap: 60%;
+}
+
+.prev-button {
+    background-color: transparent;
+    border-radius: 20px;
+    border: 1px solid #4A3AFF;
+    color: #4A3AFF;
+    width: 120px;
+    height: 50px;
 }

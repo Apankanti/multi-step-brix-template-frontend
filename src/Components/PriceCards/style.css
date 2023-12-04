@@ -1,17 +1,17 @@
-.card {
-    display: flex;
-    padding: 15px;
+.priceCard {
+    width: 80%;
+    padding: 20px;
     border: 1px solid lightgray;
-    gap: 10px;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
     box-shadow: inset 0 0 2px lightgray;
+    border-radius: 10px;
+
 }
 
-.card>img {
-    width: 30px;
-    padding: 8px;
-    background-color: rgb(228, 225, 255);
-    border-radius: 50%;
+.priceInput {
+    width: 10px;
+    margin-left: 0px;
+}
+
+.priceLabel {
+    margin: 0px;
 }
