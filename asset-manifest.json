@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "//multi-step-brix-template-frontend.git/static/css/main.e776bb37.css",
+    "main.js": "//multi-step-brix-template-frontend.git/static/js/main.b8f9cdbd.js",
+    "static/js/787.a1c9dcb6.chunk.js": "//multi-step-brix-template-frontend.git/static/js/787.a1c9dcb6.chunk.js",
+    "static/media/logo-brix-templates.svg": "//multi-step-brix-template-frontend.git/static/media/logo-brix-templates.69d727f6b87b6b68dc6f6cd03f60ebbb.svg",
+    "static/media/development.svg": "//multi-step-brix-template-frontend.git/static/media/development.77f97d7c9b12d0b8a2d0386fec566a48.svg",
+    "static/media/web-design.svg": "//multi-step-brix-template-frontend.git/static/media/web-design.c9f95a2372aebbf00a8ff6ac8aa262e8.svg",
+    "static/media/marketing.svg": "//multi-step-brix-template-frontend.git/static/media/marketing.ea76282db86c91d01c811be98685d771.svg",
+    "static/media/other.svg": "//multi-step-brix-template-frontend.git/static/media/other.9e75810284e8457ebeab9b59f3100ed0.svg",
+    "static/media/blue-right.svg": "//multi-step-brix-template-frontend.git/static/media/blue-right.43d0562c86b247e0d163c9cf3a64aefe.svg",
+    "static/media/company.svg": "//multi-step-brix-template-frontend.git/static/media/company.98b4281cf2bfd00c01aa7f1069af9a15.svg",
+    "index.html": "//multi-step-brix-template-frontend.git/index.html",
+    "static/media/phone-126.svg": "//multi-step-brix-template-frontend.git/static/media/phone-126.9a6187f5e6266f81021287b237eb3622.svg",
+    "static/media/user-128.svg": "//multi-step-brix-template-frontend.git/static/media/user-128.cd35fa1896d84c37f864f24de7a035d4.svg",
+    "static/media/message-16.svg": "//multi-step-brix-template-frontend.git/static/media/message-16.92eb9cc396b59ce6fc08f80a0a5aadaf.svg",
+    "main.e776bb37.css.map": "//multi-step-brix-template-frontend.git/static/css/main.e776bb37.css.map",
+    "main.b8f9cdbd.js.map": "//multi-step-brix-template-frontend.git/static/js/main.b8f9cdbd.js.map",
+    "787.a1c9dcb6.chunk.js.map": "//multi-step-brix-template-frontend.git/static/js/787.a1c9dcb6.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e776bb37.css",
+    "static/js/main.b8f9cdbd.js"
+  ]
+}
