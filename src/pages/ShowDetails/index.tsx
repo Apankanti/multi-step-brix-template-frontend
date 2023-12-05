@@ -2,10 +2,11 @@
 import React, { useEffect } from "react";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import Header from "../../Header";
-import Footer from "../../Footer";
-import { RootState } from "../../../store/types";
+
 import "./style.css"; // Import the stylesheet
+import { RootState } from "../../store/types";
+import Header from "../../Components/Header";
+import Footer from "../../Components/Footer";
 
 const ShowDetails = () => {
   const history = useNavigate();
@@ -17,7 +18,7 @@ const ShowDetails = () => {
     // Check if there is no data in formData
     if (!formData || !formData.name) {
       // Redirect to the homepage
-      history("/");
+      history("/home");
     }
   }, [formData, history]);
 

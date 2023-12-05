@@ -7,14 +7,14 @@ import { RootState } from "../../store/types";
 import { setFormData } from "../../store/actions";
 import PriceCard from "../PriceCards";
 
-interface Form3Props {
+interface PriceDetailsProps {
   setFormValid: React.Dispatch<React.SetStateAction<boolean>>;
   isNext: boolean;
   setIsNext: React.Dispatch<React.SetStateAction<boolean>>;
   setStep: React.Dispatch<React.SetStateAction<number>>;
 }
 
-const Form3: React.FC<Form3Props> = ({
+const PriceDetails: React.FC<PriceDetailsProps> = ({
   setFormValid,
   isNext,
   setIsNext,
@@ -84,4 +84,4 @@ const Form3: React.FC<Form3Props> = ({
   );
 };
 
-export default Form3;
+export default PriceDetails;

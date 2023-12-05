@@ -1,16 +1,16 @@
 import React, { useState } from "react";
 import "./style.css"
 import { useSelector } from "react-redux";
-import { RootState } from "../../../store/types";
-import Footer from "../../Footer";
-import Button from "../../Button";
-import SubmitDetails from "../../SubmitDetails/SubmitDetails";
-import OurServices from "../../Forms/OurServices";
-import ContactDetails from "../../Forms/ContactDetails";
+import { RootState } from "../../store/types";
+import Header from "../../Components/Header";
+import ProgressBar from "../../Components/ProgressBar";
+import ContactDetails from "../../Components/Forms/ContactDetails";
+import OurServices from "../../Components/Forms/OurServices";
+import SubmitDetails from "../../Components/SubmitDetails/SubmitDetails";
+import Button from "../../Components/Button";
+import Footer from "../../Components/Footer";
+import PriceDetails from "../../Components/Forms/PriceDetails";
 
-import Header from "../../Header";
-import PriceDetails from "../../Forms/PriceDetails";
-import ProgressBar from "../../ProgressBar";
 
 
 function MainPage() {
