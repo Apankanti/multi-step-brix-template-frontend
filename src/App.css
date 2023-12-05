@@ -57,11 +57,11 @@ p {
     margin-top: 20px;
     height: auto;
     display: flex;
-    width: 100%;
+    width: 70%;
     justify-content: end;
     margin-right: auto;
     margin-left: auto;
-    gap: 60%;
+    gap: 54%;
 }
 
 .prev-button {

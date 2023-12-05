@@ -14,9 +14,9 @@ interface CommonInputProps {
 }
 
 const CommonInput: React.FC<CommonInputProps> = ({
+  type,
   value,
   onClick,
-  type,
   placeholder,
   image,
   buttonTrue,

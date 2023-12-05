@@ -1,4 +1,4 @@
-// store/types.ts
+
 
 export const SET_FORM_DATA = "SET_FORM_DATA";
 
@@ -8,10 +8,9 @@ interface SetFormDataAction {
     name: string;
     email: string;
     number: string;
-    companyName: string;
-    
-    // selectedService: string;
-    // projectBudget: string;
+    companyName: string; 
+    selectedService: string;
+    projectBudget: string;
   };
 }
 
@@ -22,7 +21,6 @@ export interface FormState {
   email: string;
   number: string;
   companyName: string;
-
   selectedService: string;
   projectBudget: string;
 }
