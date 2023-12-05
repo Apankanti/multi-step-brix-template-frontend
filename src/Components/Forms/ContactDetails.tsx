@@ -6,7 +6,6 @@ import user from "../../Components/images/user-128.svg";
 import phone from "../../Components/images/phone-126.svg";
 import emailIcon from "../../Components/images/message-16.svg";
 import company from "../../Components/images/company.svg";
-
 import { setFormData } from "../../store/actions";
 import CommonInput from "../CommonInput/CommonInput";
 
