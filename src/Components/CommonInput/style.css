@@ -2,7 +2,6 @@
     display: flex;
     width: 100%;
     position: relative;
-
 }
 
 .input__box {
@@ -27,4 +26,10 @@
     border: none;
     background-color: transparent;
 
+}
+
+label {
+    padding: 25px;
+    display: block;
+    margin-bottom: -19px;
 }

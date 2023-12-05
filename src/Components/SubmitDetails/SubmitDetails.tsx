@@ -1,5 +1,7 @@
 import React from "react";
 // import axios from "axios";
+import { useNavigate } from "react-router-dom";
+
 import submitImg from "../images/blue-right.svg";
 import "./style.css";
 import Button from "../Button/index";
@@ -9,11 +11,22 @@ import { setFormData } from "../../store/actions";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-interface SubmitProps {}
+interface SubmitProps {
+  setFormValid: React.Dispatch<React.SetStateAction<boolean>>;
+  isNext: boolean;
+  setIsNext: React.Dispatch<React.SetStateAction<boolean>>;
+  setStep: React.Dispatch<React.SetStateAction<number>>;
+}
 
-const SubmitDetails: React.FC<SubmitProps> = () => {
+const SubmitDetails: React.FC<SubmitProps> = ({
+  setFormValid,
+  isNext,
+  setIsNext,
+  setStep,
+}) => {
   const dispatch = useDispatch();
   const formData = useSelector((state: RootState) => state.form);
+const navigate = useNavigate();
 
   const submitButtonHandler = async () => {
     try {
@@ -47,8 +60,14 @@ const SubmitDetails: React.FC<SubmitProps> = () => {
       if (response.ok) {
         console.log("Response :", apiFormData);
         toast.success("Data submitted successful");
+        setFormValid(true);
+        setIsNext(true);
+        setIsNext(true);
+        setStep(5);
+        navigate("/show-details");// Redirect to ShowDetails
       } else {
         toast.error("API call failed");
+        setStep(4);
       }
     } catch (error) {
       toast.error("Error making API call");

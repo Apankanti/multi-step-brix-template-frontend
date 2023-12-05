@@ -17,9 +17,11 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
   };
 
   return (
-    <div className="service-card" onClick={handleCardClick} id={text}>
-      <img src={imgPath} alt="service-card-image" />
-      <p>{text}</p>
+    <div className="services">
+      <div className="service-card" onClick={handleCardClick} id={text}>
+        <img src={imgPath} alt="service-card-image" />
+        <p>{text}</p>
+      </div>
     </div>
   );
 };

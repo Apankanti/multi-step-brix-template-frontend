@@ -13,7 +13,8 @@
 .input-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    height: 130px;
+    gap: 25px;
 }
 
 label {
@@ -76,3 +77,4 @@ input {
 .error-message {
     color: red;
 }
+

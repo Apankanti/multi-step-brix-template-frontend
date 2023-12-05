@@ -40,8 +40,7 @@ const ContactDetails: React.FC<ContactDetailsProps> = ({
       const isNameValid = /^[a-zA-Z\s]+$/.test(name);
       const isEmailValid =
         email.trim().includes("@") && email.trim().includes(".");
-      const isNumberValid =
-        /^\d+$/.test(number) && number.length === 10 && number.length < 15;
+      const isNumberValid = /^[0-9]+$/.test(number) && number.length === 10;
 
       setNameError(isNameValid ? "" : "Please enter a valid name!");
       setEmailError(isEmailValid ? "" : "Email is not valid!");
@@ -68,7 +67,6 @@ const ContactDetails: React.FC<ContactDetailsProps> = ({
           <h2>Contact Details</h2>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
         </div>
-
         <div className="input-grid">
           {[
             { label: "Name", input: name, type: "text", error: nameError },
@@ -85,9 +83,18 @@ const ContactDetails: React.FC<ContactDetailsProps> = ({
                 type={input.type}
                 placeholder={`Your ${input.label}`}
                 image={input.label === "Name" ? user : phone}
-                onChange={(value: string) =>
-                  input.label === "Name" ? setName(value) : setNumber(value)
-                }
+                onChange={(value: string) => {
+                  if (input.label === "Name") {
+                    setName(value.replace(/[^a-zA-Z\s]/g, ""));
+                    setNameError("");
+                  } else if (input.label === "Phone Number") {
+                   const numericValue = value.replace(/[^0-9]/g, ""); // Allow only numbers
+                   setNumber(numericValue.slice(0, 10)); // Ensure only 10 digits
+                   setNumberError(
+                     numericValue.length === 10 ? "" : ""
+                   );
+                  }
+                }}
                 value={input.label === "Name" ? name : number}
               />
               <div className="error-message">{input.error}</div>
@@ -110,16 +117,18 @@ const ContactDetails: React.FC<ContactDetailsProps> = ({
                 type={input.type}
                 placeholder={`${input.label} address`}
                 image={input.label === "Email" ? emailIcon : company}
-                onChange={(value: string) =>
-                  input.label === "Email"
-                    ? setEmail(value)
-                    : setCompanyName(value)
-                }
+                onChange={(value: string) => {
+                  if (input.label === "Email") {
+                    setEmail(value);
+                    setEmailError("");
+                  } else if (input.label === "Company") {
+                    setCompanyName(value);
+                    setCompanyNameError("");
+                  }
+                }}
                 value={input.label === "Email" ? email : companyName}
               />
-              <div className="error-message" >
-                {input.error}
-              </div>
+              <div className="error-message">{input.error}</div>
             </div>
           ))}
         </div>

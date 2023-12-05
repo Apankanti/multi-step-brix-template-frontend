@@ -1,4 +1,4 @@
-// ProgressBar.tsx
+
 
 import React from "react";
 import "./style.css";
