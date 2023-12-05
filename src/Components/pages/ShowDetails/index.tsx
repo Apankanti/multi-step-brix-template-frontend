@@ -17,7 +17,7 @@ const ShowDetails = () => {
     // Check if there is no data in formData
     if (!formData || !formData.name) {
       // Redirect to the homepage
-      history("/home");
+      history("/");
     }
   }, [formData, history]);
 

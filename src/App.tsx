@@ -20,7 +20,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         
-          <Route path="/home" element={<MainPage />} />
+          <Route path="/" element={<MainPage />} />
           <Route path="/show-details" element={<ShowDetails />} />
         
       </Routes>
