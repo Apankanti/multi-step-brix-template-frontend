@@ -30,18 +30,21 @@ const OurServices: React.FC<ServicesProps> = ({
   );
   const [serviceError, setServiceError] = useState<string>("");
 
-  if (isNext) {
-    if (selectedService.length > 0) {
-      const arrToString = selectedService.join(",");
-      dispatch(setFormData({ ...formData, selectedService: arrToString }));
-      setFormValid(true);
-      setStep(3);
-      setIsNext(false);
-    } else {
-      setServiceError("Selecting at least one service is mandatory");
-      setIsNext(false);
+  useEffect(() => {
+    if (isNext) {
+      console.log(selectedService);
+      if (selectedService.length == 1) {
+        setServiceError("Selecting at least one service is mandatory");
+        setIsNext(false);
+      } else {
+        const arrToString = selectedService.join(",");
+        dispatch(setFormData({ ...formData, selectedService: arrToString }));
+        setFormValid(true);
+        setStep(3);
+        setIsNext(false);
+      }
     }
-  }
+  }, [isNext]);
 
   useEffect(() => {
     selectedService.forEach((elem) => {
