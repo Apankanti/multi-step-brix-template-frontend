@@ -59,7 +59,7 @@ const navigate = useNavigate();
 
       if (response.ok) {
         console.log("Response :", apiFormData);
-        toast.success("Data submitted successful");
+        alert("Data submitted successful");
         setFormValid(true);
         setIsNext(true);
         setIsNext(true);
