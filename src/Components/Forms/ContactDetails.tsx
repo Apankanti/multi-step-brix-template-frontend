@@ -29,7 +29,6 @@ const ContactDetails: React.FC<ContactDetailsProps> = ({
   const [email, setEmail] = useState<string>(form.email);
   const [number, setNumber] = useState<string>(form.number);
   const [companyName, setCompanyName] = useState<string>(form.companyName);
-
   const [nameError, setNameError] = useState<string>("");
   const [emailError, setEmailError] = useState<string>("");
   const [numberError, setNumberError] = useState<string>("");

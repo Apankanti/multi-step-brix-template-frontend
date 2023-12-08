@@ -30,15 +30,10 @@ const navigate = useNavigate();
 
   const submitButtonHandler = async () => {
     try {
-      const bearerToken: string =
-        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6ImJvYkBwYWt0b2x1cy5jb20iLCJuYW1laWQiOiJhYTgzOTQyNS00OWU4LTQwNzItOGJlNC0yMDQ5MDU4YzYwOGQiLCJnaXZlbl9uYW1lIjoiQm9iIiwiZmFtaWx5X25hbWUiOiJBbmFzb3JpIiwidXNlcl92aWV3X2FjY2Vzc190eXBlIjoiRGVhbGVyIiwicm9sZSI6WyJEZWFsZXIiLCJWaWV3IEludm9pY2UiLCJTYXZlIFF1b3RlcyIsIkVkaXQgTWFya3VwIiwiVmlldyBSZW1pdHRhbmNlIiwiTWFuYWdlIEFDSCBJbmZvcm1hdGlvbiIsIkNhbmNlbCBDb250cmFjdCIsIlZvaWQgQ29udHJhY3RzIiwiVmlldyBSZXRhaWwgUHJpY2UgTGltaXRzIiwiRWRpdCBSZXRhaWwgUHJpY2UgTGltaXRzIiwiUGF5IFJlbWl0dGFuY2UiLCJFbnRlciBDb250cmFjdCIsIlByb2Nlc3MgUXVvdGVzIiwiU2FsZXMgQXNzb2NpYXRlcyIsIlZpZXcgTWFya3VwIl0sInNpZ25faW4iOiJtZmEiLCJuYmYiOjE2OTgwNTQ1MjYsImV4cCI6MTY5ODE0MDkyNiwiaWF0IjoxNjk4MDU0NTI2LCJpc3MiOiJodHRwczovL3pvb20tc3RhZ2UuYWxwaGF3YXJyYW50eS5jb20iLCJhdWQiOiJodHRwczovL3pvb20tc3RhZ2UuYWxwaGF3YXJyYW50eS5jb20ifQ._6DP-RHaxKa0PYP4DSIZLkJYYggfcHNGm68VMggWV9E";
-
-      const apiUrl: string =
-        "https://aw-test.free.beeceptor.com/api/v1/lead/save";
+      const apiUrl: string = "http://localhost:3001/user/create";
 
       const headers = {
         "Content-Type": "application/json",
-        Authorization: `Bearer ${bearerToken}`,
       };
 
       const apiFormData = {
@@ -64,7 +59,7 @@ const navigate = useNavigate();
         setIsNext(true);
         setIsNext(true);
         setStep(5);
-        navigate("/show-details");// Redirect to ShowDetails
+        navigate("/show-details"); // Redirect to ShowDetails
       } else {
         toast.error("API call failed");
         setStep(4);
