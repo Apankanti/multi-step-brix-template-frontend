@@ -30,13 +30,10 @@ const navigate = useNavigate();
 
   const submitButtonHandler = async () => {
     try {
-     
-      const apiUrl: string =
-        "https://localhost/3001/user/create";
+      const apiUrl: string = "http://localhost:3001/user/create";
 
       const headers = {
         "Content-Type": "application/json",
-        
       };
 
       const apiFormData = {
@@ -62,7 +59,7 @@ const navigate = useNavigate();
         setIsNext(true);
         setIsNext(true);
         setStep(5);
-        navigate("/show-details");// Redirect to ShowDetails
+        navigate("/show-details"); // Redirect to ShowDetails
       } else {
         toast.error("API call failed");
         setStep(4);

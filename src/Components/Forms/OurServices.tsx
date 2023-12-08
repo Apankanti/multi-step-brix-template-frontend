@@ -9,6 +9,7 @@ import webDesign from "../../Components/images/web-design.svg";
 import marketing from "../../Components/images/marketing.svg";
 import other from "../../Components/images/other.svg";
 import "./style.css";
+
 interface ServicesProps {
   setFormValid: React.Dispatch<React.SetStateAction<boolean>>;
   isNext: boolean;
@@ -25,20 +26,18 @@ const OurServices: React.FC<ServicesProps> = ({
   const dispatch = useDispatch();
   const formData = useSelector((state: RootState) => state.form);
 
-  const [selectedService, setSelectedService] = useState<string[]>(
-    formData.selectedService.split(",")
+  const [selectedService, setSelectedService] = useState<string>(
+    formData.selectedService
   );
   const [serviceError, setServiceError] = useState<string>("");
 
   useEffect(() => {
     if (isNext) {
-      console.log(selectedService);
-      if (selectedService.length == 1) {
-        setServiceError("Selecting at least one service is mandatory");
+      if (!selectedService) {
+        setServiceError("Selecting a service is mandatory");
         setIsNext(false);
       } else {
-        const arrToString = selectedService.join(",");
-        dispatch(setFormData({ ...formData, selectedService: arrToString }));
+        dispatch(setFormData({ ...formData, selectedService }));
         setFormValid(true);
         setStep(3);
         setIsNext(false);
@@ -46,29 +45,30 @@ const OurServices: React.FC<ServicesProps> = ({
     }
   }, [isNext]);
 
-  useEffect(() => {
-    selectedService.forEach((elem) => {
-      const selectedElement = document.getElementById(elem);
-      if (selectedElement) selectedElement.style.border = "1px solid blue";
-    });
-  }, [selectedService]);
+useEffect(() => {
+  document.querySelectorAll(".service-card").forEach((card) => {
+    (card as HTMLDivElement).style.border = "none";
+  });
 
-  function selectionOperationHandler(data: string) {
-    const selectedElement = document.getElementById(data);
-    if (!selectedElement) {
-      return;
-    }
-    if (selectedService.includes(data)) {
-      const filteredArray = selectedService.filter((elem) => {
-        return elem !== data;
-      });
-      setSelectedService(filteredArray);
-      selectedElement.style.border = "none";
-    } else {
-      setSelectedService([...selectedService, data]);
-      selectedElement.style.border = "1px solid blue";
-    }
+  const selectedElement = document.getElementById(selectedService);
+  if (selectedElement) {
+    (selectedElement as HTMLDivElement).style.border = "1px solid blue";
   }
+}, [selectedService]);
+
+function selectionOperationHandler(data: string) {
+  setSelectedService(data);
+
+  document.querySelectorAll(".service-card").forEach((card) => {
+    (card as HTMLDivElement).style.border = "none";
+  });
+
+  const selectedElement = document.getElementById(data);
+  if (selectedElement) {
+    (selectedElement as HTMLDivElement).style.border = "1px solid blue";
+  }
+}
+
 
   return (
     <div className="common">
